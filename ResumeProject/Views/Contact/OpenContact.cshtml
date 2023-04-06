@@ -1,0 +1,18 @@
+﻿@model ResumeProject.Models.TblContact
+@{
+    ViewBag.Title = "OpenContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Mesaj İçeriği</h2>
+
+<form method="get">
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x=>x.NameSurname, new {@class="form-control" })
+    <label>Konu</label>
+    @Html.TextBoxFor(x=>x.TblCategory.CategoryName, new { @class = "form-control" })
+    <label>Mesaj</label>
+    @Html.TextAreaFor(x=>x.Message, new { @class = "form-control" })
+</form>
+
+

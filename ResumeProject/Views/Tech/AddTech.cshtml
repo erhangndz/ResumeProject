@@ -1,0 +1,18 @@
+﻿@model ResumeProject.Models.TblTech
+@{
+    ViewBag.Title = "AddTech";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Teknoloji Ekleme Sayfası</h2>
+
+
+<form method="post">
+    <label>Teknoloji Adı</label>
+    @Html.TextBoxFor(x => x.TechTitle, new { @class = "form-control" })
+    <br />
+    <label>Teknoloji Değeri</label>
+    @Html.TextBoxFor(x => x.TechValue, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Verileri Kaydet</button>
+</form>

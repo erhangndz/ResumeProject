@@ -1,0 +1,30 @@
+﻿@model List<ResumeProject.Models.TblProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Proje Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Proje Adı</th>
+        <th>Proje Açıklaması</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.ProjectID</td>
+                    <td>@x.ProjectTitle</td>
+                    <td>@x.ProjectDescription</td>
+                    <td><a href="/Project/DeleteProject/@x.ProjectID" class="btn btn-outline-danger">Sil</a></td>
+                    <td><a href="/Project/UpdateProject/@x.ProjectID" class="btn btn-outline-success">Güncelle</a></td>
+                </tr>
+            }
+
+
+</table>
+<a href="/Project/AddProject" class="btn btn-outline-primary">Yeni Proje Girişi</a>

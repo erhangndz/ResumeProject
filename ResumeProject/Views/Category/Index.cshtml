@@ -1,0 +1,28 @@
+﻿@model List<ResumeProject.Models.TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.CategoryID</td>
+                    <td>@x.CategoryName</td>
+                    <td><a href="/Category/DeleteCategory/@x.CategoryID" class="btn btn-outline-danger">Sil</a></td>
+                    <td><a href="/Category/UpdateCategory/@x.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
+                </tr>
+            }
+
+
+</table>
+<a href="/Category/AddCategory" class="btn btn-outline-primary">Yeni Kategori Girişi</a>

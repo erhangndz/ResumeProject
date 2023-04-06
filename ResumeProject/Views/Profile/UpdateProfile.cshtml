@@ -1,0 +1,39 @@
+﻿@model ResumeProject.Models.TblProfile
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Profil Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ProfileID, new {@class="form-control" })
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.profileDescription, new { @class = "form-control" })
+    <br />
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+    <br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.address, new { @class = "form-control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.phone, new { @class = "form-control" })
+    <br />
+    <label>Twitter</label>
+    @Html.TextBoxFor(x => x.socialnetwork1, new { @class = "form-control" })
+    <br />
+    <label>Facebook</label>
+    @Html.TextBoxFor(x => x.socialnetwork2, new { @class = "form-control" })
+    <br />
+    <label>Instagram</label>
+    @Html.TextBoxFor(x => x.socialnetwork3, new { @class = "form-control" })
+    <br />
+    <label>Linkedin</label>
+    @Html.TextBoxFor(x => x.socialnetwork4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-success">Verileri Güncelle</button>
+</form>

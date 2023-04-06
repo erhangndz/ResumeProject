@@ -1,0 +1,34 @@
+﻿@model ResumeProject.Models.TblProfile
+@{
+    ViewBag.Title = "AddProfile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Profil Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Profil Başlığı</label>
+    @Html.TextBoxFor(x => x.ProfileTitle, new { @class = "form-control" })
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.profileDescription, new { @class = "form-control" })
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.address, new { @class = "form-control" })
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.phone, new { @class = "form-control" })
+    <label>Twitter Hesabı</label>
+    @Html.TextBoxFor(x => x.socialnetwork1, new { @class = "form-control" })
+    <label>Facebook Hesabı</label>
+    @Html.TextBoxFor(x => x.socialnetwork2, new { @class = "form-control" })
+    <label>Instagram Hesabı</label>
+    @Html.TextBoxFor(x => x.socialnetwork3, new { @class = "form-control" })
+    <label>Linkedin Hesabı</label>
+    @Html.TextBoxFor(x => x.socialnetwork4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Yeni Profil Ekle</button>
+
+</form>
+

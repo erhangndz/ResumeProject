@@ -1,0 +1,33 @@
+﻿@model List< ResumeProject.Models.TblProfile>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Profil Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+
+    </tr>
+    @foreach(var x in Model)
+            {
+<tr>
+    <td>@x.ProfileID</td>
+    <td>@x.Name</td>
+    <td>@x.profileDescription</td>
+    <td><a href="/Profile/DeleteProfile/@x.ProfileID" class="btn btn-outline-danger">Sil</a></td>
+    <td><a href="/Profile/UpdateProfile/@x.ProfileID" class="btn btn-outline-success">Güncelle</a></td>
+    <td><a href="/Profile/ProfileDetails/@x.ProfileID" class="btn btn-outline-dark">Detaylar</a></td>
+    
+</tr>
+            }
+
+</table>
+<a href="/Profile/AddProfile" class="btn btn-outline-primary">Yeni Profil Girişi</a>

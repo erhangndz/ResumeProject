@@ -1,0 +1,23 @@
+﻿@model ResumeProject.Models.TblSkill
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yetenek Güncelleme Sayfası</h2>
+
+<form method="post">
+    
+    @Html.HiddenFor(x => x.SkillID, new {@class= "form-control"})
+ 
+    <label>Yetenek Başlığı</label>
+    @Html.TextBoxFor(x => x.SkillTitle, new { @class = "form-control"})
+    <br />
+    <label>Yetenek Açıklaması</label>
+    @Html.TextBoxFor(x => x.SkillDescription, new { @class = "form-control" })
+    <br />
+    <label>Yetenek İkonu</label>
+    @Html.TextBoxFor(x => x.SkillIcon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Verileri Güncelle</button>
+</form>
