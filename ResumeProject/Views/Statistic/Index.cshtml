@@ -1,0 +1,55 @@
+﻿@using ResumeProject.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İstatistik Sayfası</h2>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    @Html.Action("PartialHeader")
+    <div class="container">
+        <br />
+        <div class="card bg-dark text-white">
+            <div class="card-body">Proje Talebi Sayısı: @ViewBag.countprojetalebi</div>
+        </div>
+        <br>
+        <div class="card bg-primary text-white">
+            <div class="card-body">Bildiğim Programlama Dili Sayısı: @ViewBag.techcount </div>
+        </div>
+        <br>
+        <div class="card bg-success text-white">
+            <div class="card-body">C# Bilgi Düzeyi: @ViewBag.csharpValue</div>
+        </div>
+        <br>
+        <div class="card bg-info text-white">
+            <div class="card-body">Toplam Mesaj Sayısı: @ViewBag.contactCount</div>
+        </div>
+        <br>
+        <div class="card bg-warning text-white">
+            <div class="card-body">Toplam Teşekkür Mesajı Sayısı: @ViewBag.subjectTesekkur</div>
+        </div>
+        <br>
+        <div class="card bg-danger text-white">
+            <div class="card-body">Toplam Değer Sayısı: @ViewBag.sumTechValue</div>
+        </div>
+        <br>
+        <div class="card bg-secondary text-white">
+            <div class="card-body">Bildiğim Teknolojilerin Ortalaması: @ViewBag.avgTechValue </div>
+        </div>
+        <br>
+        <div class="card bg-success text-white">
+            <div class="card-body"> 3 Nolu Yetenek: @ViewBag.GetBy3ID</div>
+        </div>
+        <br>
+        <div class="card bg-primary text-white">
+            <div class="card-body">En Yüksek Yetenek Puanı: @ViewBag.maxTechValue</div>
+        </div>
+    </div>
+
+</body>
+</html>

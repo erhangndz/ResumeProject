@@ -2,11 +2,12 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h2>Profil Listesi</h2>
 
-<table class="table table-bordered">
+<table class="table table-striped">
     <tr>
         <th>#</th>
         <th>Ad Soyad</th>
@@ -18,13 +19,14 @@
     </tr>
     @foreach(var x in Model)
             {
+        count++;
 <tr>
-    <td>@x.ProfileID</td>
+    <td>@count</td>
     <td>@x.Name</td>
     <td>@x.profileDescription</td>
     <td><a href="/Profile/DeleteProfile/@x.ProfileID" class="btn btn-outline-danger">Sil</a></td>
     <td><a href="/Profile/UpdateProfile/@x.ProfileID" class="btn btn-outline-success">Güncelle</a></td>
-    <td><a href="/Profile/ProfileDetails/@x.ProfileID" class="btn btn-outline-dark">Detaylar</a></td>
+    <td><a href="/Profile/ProfileDetails/@x.ProfileID" class="btn btn-outline-info">Detaylar</a></td>
     
 </tr>
             }

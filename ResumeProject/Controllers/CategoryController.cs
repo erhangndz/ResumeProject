@@ -52,5 +52,10 @@ namespace ResumeProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult GetMessage(int id)
+        {
+            var values = db.TblContact.Where(x => x.Subject == id).ToList();
+            return View(values);
+        }
     }
 }

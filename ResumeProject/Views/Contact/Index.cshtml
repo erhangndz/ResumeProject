@@ -3,30 +3,30 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h2>Gelen Mesajlar</h2>
 
-<table class="table table-bordered">
+<table class="table table-striped">
     <tr>
         <th>#</th>
         <th>Ad Soyad</th>
         <th>Konu</th>
         <th>Tarih</th>
         <th>Sil</th>
-        <th>Güncelle</th>
         <th>Mesajı Aç</th>
     </tr>
     @foreach(var x in Model)
             {
+        count++;
         <tr>
-            <td>@x.ContactID</td>
+            <td>@count</td>
             <td>@x.NameSurname</td>
             <td>@x.TblCategory.CategoryName</td>
             <td>@x.Date</td>
             <td><a href="/Contact/DeleteContact/@x.ContactID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/Contact/UpdateContact/@x.ContactID" class="btn btn-outline-success">Güncelle</a></td>
-            <td><a href="/Contact/OpenContact/@x.ContactID" class="btn btn-outline-dark">Mesajı Aç</a></td>
+            <td><a href="/Contact/OpenContact/@x.ContactID" class="btn btn-outline-info">Mesajı Aç</a></td>
         </tr>
             }
    

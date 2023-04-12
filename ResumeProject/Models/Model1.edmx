@@ -58,6 +58,15 @@
           <Property Name="ProjectDescription" Type="nvarchar" MaxLength="500" />
           <Property Name="projectimageurl" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TblService">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceTitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceIcon" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceDescription" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TblSkill">
           <Key>
             <PropertyRef Name="SkillID" />
@@ -87,12 +96,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="countprojetalebi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbResumeModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProfile" EntityType="Self.TblProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTech" EntityType="Self.TblTech" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblContact_TblCategory" Association="Self.FK_TblContact_TblCategory">
@@ -158,6 +169,8 @@
             <End Role="TblCategory" EntitySet="TblCategory" />
             <End Role="TblContact" EntitySet="TblContact" />
           </AssociationSet>
+          <FunctionImport Name="countprojetalebi" ReturnType="Collection(Int32)" />
+          <EntitySet Name="TblService" EntityType="DbResumeModel.TblService" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -201,6 +214,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TblService">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -281,6 +303,17 @@
               <MappingFragment StoreEntitySet="TblCategory">
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="countprojetalebi" FunctionName="DbResumeModel.Store.countprojetalebi" />
+          <EntitySetMapping Name="TblService">
+            <EntityTypeMapping TypeName="DbResumeModel.TblService">
+              <MappingFragment StoreEntitySet="TblService">
+                <ScalarProperty Name="ServiceDescription" ColumnName="ServiceDescription" />
+                <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
+                <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

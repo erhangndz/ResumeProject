@@ -2,24 +2,27 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h2>Kategori Listesi</h2>
 
-<table class="table table-bordered">
+<table class="table table-striped">
     <tr>
         <th>#</th>
         <th>Kategori Adı</th>
         <th>Sil</th>
-        <th>Güncelle</th>
+        <th>Mesajları Getir</th>
     </tr>
-    @foreach(var x in Model)
-            {
+    @foreach (var x in Model)
+
+    {
+        count++;
                 <tr>
-                    <td>@x.CategoryID</td>
+                    <td>@count</td>
                     <td>@x.CategoryName</td>
                     <td><a href="/Category/DeleteCategory/@x.CategoryID" class="btn btn-outline-danger">Sil</a></td>
-                    <td><a href="/Category/UpdateCategory/@x.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
+                    <td><a href="/Category/GetMessage/@x.CategoryID" class="btn btn-outline-info">Mesajları Getir</a></td>
                 </tr>
             }
 

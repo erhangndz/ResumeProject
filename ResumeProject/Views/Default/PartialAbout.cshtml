@@ -1,0 +1,68 @@
+﻿@using ResumeProject.Models
+@model List<TblProfile>
+
+
+@foreach (var x in Model)
+{
+
+
+<section class="w3l-about py-5" id="about">
+    <div class="container py-md-5 py-2">
+        <div class="row w3l-row">
+            <div class="col-lg-5 my-image pe-lg-5 mb-lg-0 mb-md-5 mb-4">
+                <img src="~/Content/starter/assets/images/about.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-7 w3l-about-info px-lg-4 align-center">
+                <h6 class="w3l-title-small mb-1">Biyografim</h6>
+                <h3 class="w3l-title-main mb-2">@x.ProfileTitle</h3>
+                <p class="my-4 pe-lg-5">@x.profileDescription</p>
+                <div class="my-info mt-4">
+                    <div class="single-info">
+                        <span>Adım:</span>
+                        <p>@x.Name</p>
+                    </div>
+                    <div class="single-info">
+                        <span>Adresim:</span>
+                        <p>@x.address</p>
+                    </div>
+                    <div class="single-info">
+                        <span>Email:</span>
+                        <p><a href="mailto:@x.mail">@x.mail</a></p>
+                    </div>
+                    <div class="single-info">
+                        <span>Telefon:</span>
+                        <p><a href="tel:@x.phone">@x.phone</a></p>
+                    </div>
+                </div>
+
+                <ul class="follow-social mt-lg-5 mt-4">
+                    <li>
+                        <h5 class="me-md-3">Takip Etmek İçin </h5>
+                    </li>
+
+                    <li>
+                        <a href="@x.socialnetwork1"><span class="fab fa-twitter"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="@x.socialnetwork2"><span class="fab fa-facebook-f"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="@x.socialnetwork3">
+                            <span class="fab fa-instagram"></span>
+                        </a>
+                    </li>
+
+                    <li><a href="@x.socialnetwork4"><span class="fab fa-linkedin-in"></span></a></li>
+
+                </ul>
+                <div class="w3l-btn">
+                    <a href="contact.html" class="btn btn-style btn-primary mt-lg-5 mt-4 me-md-2">Bana Ulaşın</a>
+                    <a href="#download-cv" class="btn btn-style btn-secondary mt-lg-5 mt-4">CV'mi indirin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

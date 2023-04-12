@@ -130,10 +130,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TechController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -168,6 +170,9 @@
     <Compile Include="Models\TblProject.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblSkill.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -195,6 +200,59 @@
     <Content Include="Content\sidebar-01\js\jquery.min.js" />
     <Content Include="Content\sidebar-01\js\main.js" />
     <Content Include="Content\sidebar-01\js\popper.js" />
+    <Content Include="Content\starter\about.html" />
+    <Content Include="Content\starter\assets\css\style-liberty.css" />
+    <Content Include="Content\starter\assets\images\about.jpg" />
+    <Content Include="Content\starter\assets\images\about1.jpg" />
+    <Content Include="Content\starter\assets\images\b1.jpg" />
+    <Content Include="Content\starter\assets\images\b2.jpg" />
+    <Content Include="Content\starter\assets\images\b3.jpg" />
+    <Content Include="Content\starter\assets\images\b4.jpg" />
+    <Content Include="Content\starter\assets\images\b5.jpg" />
+    <Content Include="Content\starter\assets\images\b6.jpg" />
+    <Content Include="Content\starter\assets\images\banner.jpg" />
+    <Content Include="Content\starter\assets\images\banner.png" />
+    <Content Include="Content\starter\assets\images\banner1.jpg" />
+    <Content Include="Content\starter\assets\images\blog1.jpg" />
+    <Content Include="Content\starter\assets\images\blog2.jpg" />
+    <Content Include="Content\starter\assets\images\blog3.jpg" />
+    <Content Include="Content\starter\assets\images\blog4.jpg" />
+    <Content Include="Content\starter\assets\images\blog5.jpg" />
+    <Content Include="Content\starter\assets\images\blog6.jpg" />
+    <Content Include="Content\starter\assets\images\btnNext.png" />
+    <Content Include="Content\starter\assets\images\btnPrevious.png" />
+    <Content Include="Content\starter\assets\images\db.png" />
+    <Content Include="Content\starter\assets\images\fb.png" />
+    <Content Include="Content\starter\assets\images\logo1.png" />
+    <Content Include="Content\starter\assets\images\logo2.png" />
+    <Content Include="Content\starter\assets\images\logo3.png" />
+    <Content Include="Content\starter\assets\images\logo4.png" />
+    <Content Include="Content\starter\assets\images\logo5.png" />
+    <Content Include="Content\starter\assets\images\sprite.png" />
+    <Content Include="Content\starter\assets\images\team1.jpg" />
+    <Content Include="Content\starter\assets\images\team2.jpg" />
+    <Content Include="Content\starter\assets\images\team3.jpg" />
+    <Content Include="Content\starter\assets\images\team4.jpg" />
+    <Content Include="Content\starter\assets\images\tw.png" />
+    <Content Include="Content\starter\assets\js\bootstrap.min.js" />
+    <Content Include="Content\starter\assets\js\jquery-1.7.2.js" />
+    <Content Include="Content\starter\assets\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\starter\assets\js\jquery.countup.js" />
+    <Content Include="Content\starter\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\starter\assets\js\jquery.prettyPhoto.js" />
+    <Content Include="Content\starter\assets\js\jquery.quicksand.js" />
+    <Content Include="Content\starter\assets\js\jquery.waypoints.min.js" />
+    <Content Include="Content\starter\assets\js\owl.carousel.js" />
+    <Content Include="Content\starter\assets\js\script.js" />
+    <Content Include="Content\starter\assets\js\search.js" />
+    <Content Include="Content\starter\assets\js\theme-change.js" />
+    <Content Include="Content\starter\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\starter\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\starter\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\starter\contact.html" />
+    <Content Include="Content\starter\index.html" />
+    <Content Include="Content\starter\services.html" />
+    <Content Include="Content\starter\starter-license-W3Layouts.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -317,6 +375,18 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\starter\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\starter\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\starter\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\starter\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\starter\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\starter\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\starter\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\starter\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\starter\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\starter\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\starter\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\starter\assets\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -362,6 +432,21 @@
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Project\UpdateProject.cshtml" />
     <Content Include="Views\Project\AddProject.cshtml" />
+    <Content Include="Views\Category\GetMessage.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Partial1.cshtml" />
+    <Content Include="Views\Default\PartialHeader.cshtml" />
+    <Content Include="Views\Default\PartialNavBar.cshtml" />
+    <Content Include="Views\Default\PartialFeature.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialService.cshtml" />
+    <Content Include="Views\Default\PartialTech.cshtml" />
+    <Content Include="Views\Default\PartialCounter.cshtml" />
+    <Content Include="Views\Default\PartialProjects.cshtml" />
+    <Content Include="Views\Default\PartialBrands.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
