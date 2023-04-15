@@ -1,0 +1,29 @@
+﻿@model List<ResumeProject.Models.TblReferences>
+@foreach (var x in Model)
+{
+
+
+
+<div class="item">
+    <div class="testimonial-content">
+        <div class="testimonial">
+            <blockquote>
+                <q>
+                    @x.Comment
+                </q>
+            </blockquote>
+            <div class="testi-des">
+                <div class="test-img">
+                    <img src="@x.ImageURL" class="img-fluid"
+                         alt="client-img">
+                </div>
+                <div class="peopl align-self">
+                    <h3>@x.NameSurname</h3>
+                    <p class="indentity">@x.Job</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+}

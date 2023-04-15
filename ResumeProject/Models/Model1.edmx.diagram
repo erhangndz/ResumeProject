@@ -14,6 +14,7 @@
         <EntityTypeShape EntityType="DbResumeModel.TblCategory" Width="1.5" PointX="10.25" PointY="5.125" />
         <AssociationConnector Association="DbResumeModel.FK_TblContact_TblCategory" />
         <EntityTypeShape EntityType="DbResumeModel.TblService" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DbResumeModel.TblReferences" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

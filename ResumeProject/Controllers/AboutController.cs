@@ -21,6 +21,12 @@ namespace ResumeProject.Controllers
             var x = db.TblTech.ToList();
             return PartialView(x);
         }
+
+        public PartialViewResult PartialReferences()
+        {
+            var x = db.TblReferences.ToList();
+            return PartialView(x);
+        }
     }
 
 }

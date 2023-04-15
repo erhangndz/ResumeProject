@@ -58,6 +58,16 @@
           <Property Name="ProjectDescription" Type="nvarchar" MaxLength="500" />
           <Property Name="projectimageurl" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TblReferences">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSurname" Type="varchar" MaxLength="50" />
+          <Property Name="Job" Type="varchar" MaxLength="30" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TblService">
           <Key>
             <PropertyRef Name="ServiceID" />
@@ -103,6 +113,7 @@
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProfile" EntityType="Self.TblProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblReferences" EntityType="Self.TblReferences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTech" EntityType="Self.TblTech" Schema="dbo" store:Type="Tables" />
@@ -171,6 +182,7 @@
           </AssociationSet>
           <FunctionImport Name="countprojetalebi" ReturnType="Collection(Int32)" />
           <EntitySet Name="TblService" EntityType="DbResumeModel.TblService" />
+          <EntitySet Name="TblReferences" EntityType="DbResumeModel.TblReferences" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -222,6 +234,16 @@
           <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblReferences">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Job" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -314,6 +336,17 @@
                 <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
                 <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
                 <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblReferences">
+            <EntityTypeMapping TypeName="DbResumeModel.TblReferences">
+              <MappingFragment StoreEntitySet="TblReferences">
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,26 @@
+﻿@model ResumeProject.Models.TblReferences
+@{
+    ViewBag.Title = "AddReference";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Referans Ekleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ReferenceID)
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Mesleği</label>
+    @Html.TextBoxFor(x => x.Job, new { @class = "form-control" })
+    <br />
+    <label>Yorumu</label>
+    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+    <br />
+    <label>Resim URL</label>
+    @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Yeni Referans Ekle</button>
+
+</form>
+
+
