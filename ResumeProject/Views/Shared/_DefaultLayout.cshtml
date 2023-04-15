@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHeader", "Default")
+<body>
+
+    @Html.Action("PartialNavBar", "Default")
+
+   @RenderBody()
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    @Html.Action("PartialFooter", "Default")
+    @Html.Action("PartialScripts", "Default")
+
+</body>
+</html>

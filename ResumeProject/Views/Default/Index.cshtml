@@ -1,46 +1,40 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="en">
 
-@Html.Action("PartialHeader")
+
 <body>
-    <!--header-->
-    @Html.Action("PartialNavBar")
-    <!--//header-->
-    <!-- banner section -->
+
     @Html.Action("PartialFeature")
-    <!-- //banner section -->
-    <!-- About Section-->
-    @Html.Action("PartialAbout")
-    <!-- //About Section-->
-    <!-- Services Section -->
+
+    <div id="about">
+        @Html.Action("PartialAbout")
+    </div>
+
     @Html.Action("PartialService")
-    <!-- //Services Section -->
+
     @Html.Action("PartialTech")
-    <!-- Stats Section-->
+
     @Html.Action("PartialCounter")
-    <!-- //Stats Section-->
-    <!-- portfolio -->
-    @Html.Action("PartialProjects")
-    <!-- //portfolio -->
-    <!--/brands-->
+
+    <div id="projects">
+        @Html.Action("PartialProjects")
+    </div>
+
     @Html.Action("PartialBrands")
-    <!-- //brands -->
-    <!-- footer -->
-    @Html.Action("PartialFooter")
-    <!-- //footer -->
-    <!-- Js scripts -->
+
+
+
+
+
     <!-- move top -->
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fas fa-level-up-alt" aria-hidden="true"></span>
     </button>
-   @Html.Action("PartialScripts")
+
 </body>
 </html>

@@ -1,0 +1,34 @@
+﻿@model List<ResumeProject.Models.TblService>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmetlerim Listesi</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    
+       @foreach(var x in Model)
+
+    {
+<tr>
+    <td>@x.ServiceID</td>
+    <td>@x.ServiceTitle</td>
+    <td>@x.ServiceDescription</td>
+    <td><a href="/Service/DeleteService/@x.ServiceID" class="btn btn-outline-danger">Sil</a> </td>
+    <td><a href="/Service/UpdateService/@x.ServiceID" class="btn btn-outline-success">Güncelle</a> </td>
+</tr>
+    }
+
+
+</table>
+<br />
+<a href="/Service/AddService" class="btn btn-outline-primary">Yeni Hizmet Girişi</a>
+

@@ -1,0 +1,23 @@
+﻿@model ResumeProject.Models.TblService
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Hizmet Ekleme Sayfası</h2>
+
+<form method="post">
+   
+    <label>Başlık</label>
+    @Html.TextBoxFor(x=>x.ServiceTitle, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.ServiceDescription, new { @class = "form-control" })
+    <br />
+    <label>Hizmet Resim URL</label>
+    @Html.TextBoxFor(x => x.ServiceIcon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Yeni Hizmet Ekle</button>
+
+</form>
+
