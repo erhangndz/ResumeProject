@@ -238,7 +238,9 @@
     <Content Include="Content\starter\assets\images\team2.jpg" />
     <Content Include="Content\starter\assets\images\team3.jpg" />
     <Content Include="Content\starter\assets\images\team4.jpg" />
+    <Content Include="Content\starter\assets\images\team5.jpg" />
     <Content Include="Content\starter\assets\images\tw.png" />
+    <Content Include="Content\starter\assets\images\youtube.png" />
     <Content Include="Content\starter\assets\js\bootstrap.min.js" />
     <Content Include="Content\starter\assets\js\jquery-1.7.2.js" />
     <Content Include="Content\starter\assets\js\jquery-3.3.1.min.js" />
