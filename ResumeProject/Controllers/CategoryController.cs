@@ -48,6 +48,10 @@ namespace ResumeProject.Controllers
         [HttpPost]
         public ActionResult AddCategory(TblCategory p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TblCategory.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");

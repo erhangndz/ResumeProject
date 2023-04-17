@@ -51,6 +51,10 @@ namespace ResumeProject.Controllers
         [HttpPost]
         public ActionResult AddReference(TblReferences p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TblReferences.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -25,6 +25,10 @@ namespace ResumeProject.Controllers
         [HttpPost]
         public ActionResult AddTech(TblTech p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TblTech.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");

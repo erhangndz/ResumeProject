@@ -8,6 +8,7 @@
 <form method="post">
     <label>Proje Adı</label>
     @Html.TextBoxFor(x => x.ProjectTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.ProjectTitle,"",new {@style= "color:red" })
     <br />
     <label>Proje Açıklaması</label>
     @Html.TextBoxFor(x => x.ProjectDescription, new { @class = "form-control" })

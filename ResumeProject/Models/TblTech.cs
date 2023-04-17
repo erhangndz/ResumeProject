@@ -11,10 +11,12 @@ namespace ResumeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblTech
     {
         public int TechID { get; set; }
+        [Required(ErrorMessage = "Bu kýsým boþ býrakýlamaz!")]
         public string TechTitle { get; set; }
         public Nullable<int> TechValue { get; set; }
     }

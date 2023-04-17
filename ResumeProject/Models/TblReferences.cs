@@ -11,10 +11,12 @@ namespace ResumeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblReferences
     {
         public int ReferenceID { get; set; }
+        [Required(ErrorMessage = "Bu kýsým boþ býrakýlamaz!")]
         public string NameSurname { get; set; }
         public string Job { get; set; }
         public string Comment { get; set; }

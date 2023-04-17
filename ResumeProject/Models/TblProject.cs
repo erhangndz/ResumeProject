@@ -11,10 +11,12 @@ namespace ResumeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblProject
     {
         public int ProjectID { get; set; }
+        [Required(ErrorMessage = "Bu kýsým boþ býrakýlamaz!")]
         public string ProjectTitle { get; set; }
         public string ProjectDescription { get; set; }
         public string projectimageurl { get; set; }

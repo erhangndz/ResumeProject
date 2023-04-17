@@ -9,6 +9,7 @@
 <form method="post">
     <label>Kategori Adı</label>
     @Html.TextBoxFor(x=>x.CategoryName, new  {@class="form-control" })
+    @Html.ValidationMessageFor(x=>x.CategoryName,"" ,new  { @style= "color:red" })
     <br />
     <button class="btn btn-outline-primary" >Yeni Kategori Ekle</button>
 

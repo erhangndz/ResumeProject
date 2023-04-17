@@ -50,9 +50,24 @@ namespace ResumeProject.Controllers
         [HttpPost]
         public ActionResult AddProject(TblProject p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TblProject.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Projects()
+        {
+            var values = db.TblService.ToList();
+            return View(values);
+        }
+
+        public PartialViewResult PartialProjectBanner()
+        {
+            return PartialView();
         }
     }
 }

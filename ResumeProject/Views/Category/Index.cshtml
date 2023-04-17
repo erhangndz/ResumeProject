@@ -8,24 +8,24 @@
 <h2>Kategori Listesi</h2>
 
 <table class="table table-striped">
-    <tr>
-        <th>#</th>
-        <th>Kategori Adı</th>
-        <th>Sil</th>
-        <th>Mesajları Getir</th>
+    <th>#</th>
+    <th>Kategori Adı</th>
+    <th>Sil</th>
+    <th>Mesajları Getir</th>
     </tr>
     @foreach (var x in Model)
 
     {
         count++;
-                <tr>
-                    <td>@count</td>
-                    <td>@x.CategoryName</td>
-                    <td><a href="/Category/DeleteCategory/@x.CategoryID" class="btn btn-outline-danger">Sil</a></td>
-                    <td><a href="/Category/GetMessage/@x.CategoryID" class="btn btn-outline-info">Mesajları Getir</a></td>
-                </tr>
-            }
+        <tr>
+            <td>@count</td>
+            <td>@x.CategoryName</td>
+            <td><a href="/Category/DeleteCategory/@x.CategoryID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Category/GetMessage/@x.CategoryID" class="btn btn-outline-info">Mesajları Getir</a></td>
+        </tr>
+    }
 
 
 </table>
-<a href="/Category/AddCategory" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+<br />
+<div class="buttons"><a href="/Category/AddCategory" class="btn btn-primary">Yeni Kategori Girişi</a></div>

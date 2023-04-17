@@ -12,8 +12,8 @@ namespace ResumeProject.Controllers
         DbResumeEntities db = new DbResumeEntities();
         public ActionResult Index()
         {
-            var x = db.TblProfile.ToList();
-            return View(x);
+            
+            return View();
         }
 
         public PartialViewResult PartialTechs()
@@ -26,6 +26,27 @@ namespace ResumeProject.Controllers
         {
             var x = db.TblReferences.ToList();
             return PartialView(x);
+        }
+
+        public PartialViewResult PartialAboutBanner()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialAboutSection()
+        {
+            var x = db.TblProfile.ToList();
+            return PartialView(x);
+        }
+
+        public PartialViewResult PartialVideo()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialHireMe()
+        {
+            return PartialView();
         }
     }
 

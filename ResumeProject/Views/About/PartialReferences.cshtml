@@ -1,29 +1,48 @@
 ﻿@model List<ResumeProject.Models.TblReferences>
-@foreach (var x in Model)
-{
 
 
 
-<div class="item">
-    <div class="testimonial-content">
-        <div class="testimonial">
-            <blockquote>
-                <q>
-                    @x.Comment
-                </q>
-            </blockquote>
-            <div class="testi-des">
-                <div class="test-img">
-                    <img src="@x.ImageURL" class="img-fluid"
-                         alt="client-img">
-                </div>
-                <div class="peopl align-self">
-                    <h3>@x.NameSurname</h3>
-                    <p class="indentity">@x.Job</p>
-                </div>
+
+
+
+<section class="w3l-clients" id="testimonials">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-3">
+            <div class="title-heading-w3 mx-auto text-center mb-sm-5 mb-4">
+                <span class="w3l-title-small">Referanslarım</span>
+                <h3 class="w3l-title-main">Birlikte Çalıştığım Kişilerin Yorumları</h3>
             </div>
+            <div id="owl-demo1" class="owl-carousel owl-theme mt-4 py-2 mb-5">
+                @foreach (var x in Model)
+                {
+
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>
+                                        @x.Comment
+                                    </q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="@x.ImageURL" class="img-fluid"
+                                             alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>@x.NameSurname</h3>
+                                        <p class="indentity">@x.Job</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                </div>
         </div>
     </div>
-</div>
+</section>
+
+
 
 }
