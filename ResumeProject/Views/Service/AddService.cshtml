@@ -9,13 +9,13 @@
 <form method="post">
    
     <label>Başlık</label>
-    @Html.TextBoxFor(x=>x.ServiceTitle, new { @class = "form-control" })
+    @Html.TextBoxFor(x=>x.ServiceTitle, new { @class = "form-control", @required = "" })
     <br />
     <label>Açıklama</label>
-    @Html.TextBoxFor(x => x.ServiceDescription, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ServiceDescription, new { @class = "form-control", @required = "" })
     <br />
     <label>Hizmet Resim URL</label>
-    @Html.TextBoxFor(x => x.ServiceIcon, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ServiceIcon, new { @class = "form-control", @required = "" })
     <br />
     <button class="btn btn-outline-primary">Yeni Hizmet Ekle</button>
 

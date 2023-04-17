@@ -7,14 +7,14 @@
 <h2>Yeni Proje Ekleme Sayfası</h2>
 <form method="post">
     <label>Proje Adı</label>
-    @Html.TextBoxFor(x => x.ProjectTitle, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.ProjectTitle,"",new {@style= "color:red" })
+    @Html.TextBoxFor(x => x.ProjectTitle, new { @class = "form-control", @required = "" })
+   
     <br />
     <label>Proje Açıklaması</label>
-    @Html.TextBoxFor(x => x.ProjectDescription, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ProjectDescription, new { @class = "form-control", @required = "" })
     <br />
     <label>Proje Resim URL</label>
-    @Html.TextBoxFor(x => x.projectimageurl, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.projectimageurl, new { @class = "form-control", @required = "" })
     <br />
     <button class="btn btn-outline-primary">Yeni Proje Ekle</button>
 </form>

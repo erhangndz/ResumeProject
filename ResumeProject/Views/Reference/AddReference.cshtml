@@ -8,17 +8,17 @@
 <form method="post">
     @Html.HiddenFor(x => x.ReferenceID)
     <label>Ad Soyad</label>
-    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.NameSurname, "", new {@style="color:red" })
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", @required = "" })
+    
     <br />
     <label>Mesleği</label>
-    @Html.TextBoxFor(x => x.Job, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Job, new { @class = "form-control", @required="" })
     <br />
     <label>Yorumu</label>
-    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control", @required="" })
     <br />
     <label>Resim URL</label>
-    @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control", @required = "" })
     <br />
     <button class="btn btn-outline-primary">Yeni Referans Ekle</button>
 

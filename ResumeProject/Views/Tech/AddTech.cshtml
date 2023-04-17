@@ -9,11 +9,11 @@
 
 <form method="post">
     <label>Teknoloji Adı</label>
-    @Html.TextBoxFor(x => x.TechTitle, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.TechTitle,"",new {@style="color:red" })
+    @Html.TextBoxFor(x => x.TechTitle, new { @class = "form-control", @required = "" })
+    
     <br />
     <label>Teknoloji Değeri</label>
-    @Html.TextBoxFor(x => x.TechValue, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.TechValue, new { @class = "form-control", @required = "" })
     <br />
     <button class="btn btn-outline-primary">Verileri Kaydet</button>
 </form>

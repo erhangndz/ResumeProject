@@ -8,25 +8,25 @@
 
 <form method="post">
     <label>Profil Başlığı</label>
-    @Html.TextBoxFor(x => x.ProfileTitle, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.ProfileTitle, new { @class = "form-control", @required = "" })
     <label>Ad Soyad</label>
-    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @required = "" })
     <label>Açıklama</label>
-    @Html.TextBoxFor(x => x.profileDescription, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.profileDescription, new { @class = "form-control", @required = "" })
     <label>Mail</label>
-    @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control", @required = "" })
     <label>Adres</label>
-    @Html.TextBoxFor(x => x.address, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.address, new { @class = "form-control", @required = "" })
     <label>Telefon</label>
-    @Html.TextBoxFor(x => x.phone, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.phone, new { @class = "form-control", @required = "" })
     <label>Twitter Hesabı</label>
-    @Html.TextBoxFor(x => x.socialnetwork1, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.socialnetwork1, new { @class = "form-control", @required = "" })
     <label>Facebook Hesabı</label>
-    @Html.TextBoxFor(x => x.socialnetwork2, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.socialnetwork2, new { @class = "form-control", @required = "" })
     <label>Instagram Hesabı</label>
-    @Html.TextBoxFor(x => x.socialnetwork3, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.socialnetwork3, new { @class = "form-control", @required = "" })
     <label>Linkedin Hesabı</label>
-    @Html.TextBoxFor(x => x.socialnetwork4, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.socialnetwork4, new { @class = "form-control", @required = "" })
     <br />
     <button class="btn btn-outline-primary">Yeni Profil Ekle</button>
 
